@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-{% load staticfiles %}
+{% load static  %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- BOOTSTRAP -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     <!-- MEDUIM STYLE EDITOR -->
     <script src="//cdn.jsdelivr.net/npm/medium-editor@latest/dist/js/medium-editor.min.js"></script>
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/medium-editor@latest/dist/css/medium-editor.min.css" type="text/css" media="screen" charset="utf-8">
@@ -19,7 +19,7 @@
     <nav class="navbar navbar-default techfont custom-navbar">
         <div class="container">
             <ul class="nav navbar-nav">
-                <li><a class="navbar-brand bigbrand" href=" {% url post_list %} "></a></li>
+                <li><a class="navbar-brand bigbrand" href=" {% url 'post_list' %} ">MY BLOG</a></li>
                 <li><a  href=" {% url 'about' %} ">About</a></li>
                 <li><a href='https://github.com/Priyanshu-C'>Github</a></li>
             </ul>
@@ -48,7 +48,7 @@
     <div class=""content container>
         <div class="row">
             <div class="col-md-8">
-                <div class="blog_posts">
+                <div>
                     {% block content %}
                     {% endblock content %}
                 </div>
